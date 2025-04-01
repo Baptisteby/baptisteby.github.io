@@ -1,0 +1,239 @@
+@font-face{
+    font-family: 'raleway';
+    src: url('/font/Raleway-Regular.ttf');
+}
+*{
+    box-sizing: border-box;
+}
+
+.sidenav{
+    height: 100%;
+    width: 250px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #EC5B5D;
+    padding-top: 30px;
+    transition: left 0.5s ease;
+}
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover{
+    color: rgb(0, 0, 0);
+}
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.sidenav.active{
+    left: 0;
+}
+.sidenav .close{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 1rem;
+}
+.burger-icon span{
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: #000000;
+    margin: 6px 15px;
+}
+body{
+    font-family: 'raleway';
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+html, body{
+    line-height: 1.5rem;
+    color: #222;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#intro{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.h1{
+    color: #EC5B5D;
+    font-size: 3rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dotted;
+    line-height: 3rem;
+}
+.h2{
+    color: #FCA0A2;
+    font-size: 2rem;
+}
+.h3{
+    font-size: 1.5rem;
+}
+
+
+
+nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    color: #EC5B5D;
+    display: inline;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.liste1{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+.li1{
+    text-align: center;
+    font-family: 'raleway';
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.formulaire label{
+    display: block;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+
+}
+.formulaire input{
+    width: 100%;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+textarea{
+    width: 100%;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    resize: none;
+    min-height: 116px;
+    max-height: 300px;
+}
+.msg input{
+    padding-bottom: 60px;
+    margin-bottom: 15px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td{
+    border: 1px solid #DDD;
+}
+th{
+    background-color: darkgrey;
+}
+button{
+    background-color: #EC5B5D;
+    width: 100%;
+    padding: 10px;
+    color: #DDD;
+    border-radius: 10px;
+    border: none;
+    font-family: 'raleway';
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+
+}
+.footer{
+    background-color: #EC5B5D;
+    color: #DDD;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    display: flex;
+}
+.fa-solid{
+    color: #ffffff;
+    
+}
+a{
+    color: #1E90FF;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px){
+   #carte{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    h2 {
+        flex-basis: 100%;
+    }
+    h3{
+        font-size: 1rem;
+    }
+
+    article {
+        flex-basis: 48%;
+    }
+   }
+   #form_carte{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    article, aside {
+        flex-basis: 48%;
+    }
+    h3{
+        flex-basis: 100%;
+    }
+    align-items: center;
+
+
+   }
+   .liste1{
+    flex-direction: row;
+    gap: 200px;
+    margin-right: 50px;
+   
+
+ 
+   }
+   .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   }
+   .boutton-burger{
+    display: none;
+   }
+
+
+
+}
+@media screen and (max-width: 768px){
+    .logo{
+        display: none;
+    }
+    .navbar{
+        display: none;
+    }
+}

@@ -1,0 +1,107 @@
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .clock-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .timezone {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .digital-time {
+            font-size: 22px;
+            margin-top: 15px;
+        }
+
+        .clock {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 10px solid #333;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .tick {
+            position: absolute;
+            width: 2px;
+            height: 12px;
+            background-color: #333;
+            left: 149px;
+            top: 10px;
+            transform-origin: 50% 140px;
+        }
+
+        .tick.hour {
+            width: 4px;
+            height: 16px;
+            background-color: #222;
+        }
+
+        .hand {
+            position: absolute;
+            transform-origin: bottom center;
+            left: 50%;
+            border-radius: 4px;
+            transform-origin: 50% 100%;
+            z-index: 10;
+        }
+
+        .hour-hand {
+            width: 8px;
+            height: 90px;
+            background-color: #333;
+            bottom: 150px;
+            margin-left: -4px;
+        }
+
+        .minute-hand {
+            width: 6px;
+            height: 120px;
+            background-color: #555;
+            bottom: 150px;
+            margin-left: -3px;
+        }
+
+        .second-hand {
+            width: 2px;
+            height: 130px;
+            background-color: #f00;
+            bottom: 150px;
+            margin-left: -1px;
+            transition: transform 0.05s cubic-bezier(0.9, 0.1, 0.1, 0.9);
+        }
+
+        .center-dot {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background-color: #f00;
+            border-radius: 50%;
+            top: 143px;
+            left: 143px;
+            z-index: 20;
+        }
+
+        .center-dot::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            top: 3px;
+            left: 3px;
+        }
