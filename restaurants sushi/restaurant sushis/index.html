@@ -1,78 +1,96 @@
 <!DOCTYPE html>
 <html lang="FR">
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="sushi.css">
     <title>RESTO SUSHIS</title>
 </head>
+
 <body>
     <header>
-            <nav class="navbar">
-                <div class="logo">
-                    <img class="image1" src="./ressources-esprit-sushi/ressources/img/0XvCXB-LogoMakr.png" alt="image sushi">
-                </div>
-                    <ul class="liste1">
-                        <li class="li1"><a href="#apropos">a propos</a></li>
-                        <li class="li1"><a href="#carte">notre carte</a></li>
-                        <li class="li1"><a href="#contact">nous contacter</a></li>
+        <nav class="navbar">
+            <div class="logo">
+                <img class="image1" src="./ressources-esprit-sushi/ressources/img/0XvCXB-LogoMakr.png"
+                    alt="image sushi">
+            </div>
+            <ul class="liste1">
+                <li class="li1"><a href="#apropos">a propos</a></li>
+                <li class="li1"><a href="#carte">notre carte</a></li>
+                <li class="li1"><a href="#contact">nous contacter</a></li>
+            </ul>
+        </nav>
+        <nav class="nav-burger">
+            <div class="boutton-burger">
+                <div id="mySidenav" class="sidenav">
+                    <a id="closeBtn" href="#" class="close">x</a>
+                    <ul>
+                        <li><a href="#apropos">a propos</a></li>
+                        <li><a href="#carte">notre carte</a></li>
+                        <li><a href="#contact">nous contacter</a></li>
                     </ul>
-            </nav>
-            <nav class="nav-burger">
-                <div class="boutton-burger">
-                    <div id="mySidenav" class="sidenav">
-                        <a id="closeBtn" href="#" class="close">x</a>
-                        <ul>
-                            <li><a href="#apropos">a propos</a></li>
-                            <li><a href="#carte">notre carte</a></li>
-                            <li><a href="#contact">nous contacter</a></li>
-                        </ul>
-                    </div>
-                        <a href="#" id="openBtn">
-                            <span class="burger-icon">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                        </a>
                 </div>
-            </nav>
+                <a href="#" id="openBtn">
+                    <span class="burger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </a>
+            </div>
+        </nav>
     </header>
     <main>
         <section>
             <img class="image2" src="./ressources-esprit-sushi/ressources/img/restaurant-japonais.jpg" alt="">
             <article id="intro">
-                <h1 class="h1">Bienvenue chez Esprit  Sushi</h1>
-                <p>Notre <strong> restaurant japonais</strong> vous accueille tous les jours dans une ambiance chaleureuse et conviviale. Nos <strong>sushis</strong>, <strong>makis</strong> et <strong>sashimis</strong> raviront vos papilles.</p>
-                <p>Nous vous proposons aussi un choix de <strong>plats chauds</strong>, de <strong>soupes</strong> et de <strong>boissons</strong>.</p>
-                <p>Tous nos produits sont issus de producteurs ou fournisseurs locaux et sont d'une grande fraîcheur. Ils sont préparés devant vous à la commande.</p>
-                <p><strong>Esprit Sushi</strong> dispose également d'un service traiteur pour vos soirées, anniversaires, entre amis ou en famille.</p>
+                <h1 class="h1">Bienvenue chez Esprit Sushi</h1>
+                <p>Notre <strong> restaurant japonais</strong> vous accueille tous les jours dans une ambiance
+                    chaleureuse et conviviale. Nos <strong>sushis</strong>, <strong>makis</strong> et
+                    <strong>sashimis</strong> raviront vos papilles.
+                </p>
+                <p>Nous vous proposons aussi un choix de <strong>plats chauds</strong>, de <strong>soupes</strong> et de
+                    <strong>boissons</strong>.
+                </p>
+                <p>Tous nos produits sont issus de producteurs ou fournisseurs locaux et sont d'une grande fraîcheur.
+                    Ils sont préparés devant vous à la commande.</p>
+                <p><strong>Esprit Sushi</strong> dispose également d'un service traiteur pour vos soirées,
+                    anniversaires, entre amis ou en famille.</p>
                 <hr>
             </article>
         </section>
         <section class="container">
             <article id="apropos">
                 <h2 class="h2">Qui sommes-nous ?</h2>
-                <p><strong> Esprit Sushi</strong> n'est pas un simple restaurant qui propose des « Sushi » et « autres plats japonais », nous avons établis des règles qui constituent la base de notre philosophie : « Le respect de la tradition ».</p>
-                <p>Nos chefs japonais ou formés par des japonais ont une grande expérience en cuisine et nous partagent une culture du goût propre à la tradition japonaise.</p>
-                    <h3>Notre histoire : du shopping <br> aux sushis</h3>
+                <p><strong> Esprit Sushi</strong> n'est pas un simple restaurant qui propose des « Sushi » et « autres
+                    plats japonais », nous avons établis des règles qui constituent la base de notre philosophie : « Le
+                    respect de la tradition ».</p>
+                <p>Nos chefs japonais ou formés par des japonais ont une grande expérience en cuisine et nous partagent
+                    une culture du goût propre à la tradition japonaise.</p>
+                <h3>Notre histoire : du shopping <br> aux sushis</h3>
                 <p>Notre histoire commence à Tokyo, à l'occasion d'un voyage au Japon.</p>
-                <p>Après une belle après-midi shopping, nous nous rendons au Sushi café et nous découvrons les mets japonais. Ce moment restera inoubliable…</p> 
-                <p>Dix mois plus tard, nous créons notre restaurant en France.</p> 
-                <p>Nous recrutons une cuisinière japonaise, Miya. Grâce à elle, le projet a pris tout de suite la voie authentique, celle du Japon.</p>
+                <p>Après une belle après-midi shopping, nous nous rendons au Sushi café et nous découvrons les mets
+                    japonais. Ce moment restera inoubliable…</p>
+                <p>Dix mois plus tard, nous créons notre restaurant en France.</p>
+                <p>Nous recrutons une cuisinière japonaise, Miya. Grâce à elle, le projet a pris tout de suite la voie
+                    authentique, celle du Japon.</p>
             </article>
         </section>
         <hr>
-        <section  id="carte" class="container">
+        <section id="carte" class="container">
             <h2 class="h2">Notre carte</h2>
             <article>
                 <h3>Nos sushis</h3>
-                <img src="/ressources-esprit-sushi/ressources/img/sushi.jpg" alt="sushis">
+                <img src="./ressources-esprit-sushi/ressources/img/sushi.jpg" alt="sushis">
                 <table>
                     <tr>
                         <th>Produit</th>
@@ -92,10 +110,10 @@
                     </tr>
                 </table>
             </article>
-                        
+
             <article>
                 <h3>Nos makis</h3>
-                <img src="/ressources-esprit-sushi/ressources/img/maki.jpg" alt="makis">
+                <img src="./ressources-esprit-sushi/ressources/img/maki.jpg" alt="makis">
                 <table>
                     <tr>
                         <th>Produit</th>
@@ -111,13 +129,13 @@
                     </tr>
                     <tr>
                         <td>Maki california</td>
-                            <td>6,90€</td>
+                        <td>6,90€</td>
                     </tr>
                 </table>
             </article>
             <article>
                 <h3>Nos sashimis</h3>
-                <img src="/ressources-esprit-sushi/ressources/img/sashimi.jpg" alt="sashimis">
+                <img src="./ressources-esprit-sushi/ressources/img/sashimi.jpg" alt="sashimis">
                 <table>
                     <tr>
                         <th>Produit</th>
@@ -137,37 +155,39 @@
                     </tr>
                 </table>
             </article>
-                    
+
             <article>
                 <h3>Nos plats chauds et accompagnements</h3>
-                <img src="/ressources-esprit-sushi/ressources/img/ramen.jpg" alt="ramen">
-                    <table>
-                        <tr>
-                            <th>Produit</th>
-                            <th>Prix unitaire</th>
-                        </tr>
-                        <tr>
-                            <td>Salade d'algues Wakamé</td>
-                            <td>3,90€</td>
-                        </tr>
-                        <tr>
-                            <td>Riz blanc</td>
-                            <td>3,00€</td>
-                        </tr>
-                        <tr>
-                            <td>Ramen</td>
-                            <td>10,40€</td>
-                        </tr>
-                    </table>
-                    </article>
+                <img src="./ressources-esprit-sushi/ressources/img/ramen.jpg" alt="ramen">
+                <table>
+                    <tr>
+                        <th>Produit</th>
+                        <th>Prix unitaire</th>
+                    </tr>
+                    <tr>
+                        <td>Salade d'algues Wakamé</td>
+                        <td>3,90€</td>
+                    </tr>
+                    <tr>
+                        <td>Riz blanc</td>
+                        <td>3,00€</td>
+                    </tr>
+                    <tr>
+                        <td>Ramen</td>
+                        <td>10,40€</td>
+                    </tr>
+                </table>
+            </article>
         </section>
         <hr>
         <section id="form_carte" class="container">
             <article id="contact">
                 <h2 class="h2">Nous contacter</h2>
                 <h3> Nos coordonnées</h3>
-                <p><i class="fa-solid fa-location-dot" style="color: #000000;"></i>&nbsp;2 Rue du Commandant François, 67100 Strasbourg</p>
-                <p><i class="fa-solid fa-mobile" style="color: #000000;"></i>&nbspTéléphone <a href="tel:+337 71 89 46 87"> : 07 71 89 46 87</p></a>
+                <p><i class="fa-solid fa-location-dot" style="color: #000000;"></i>&nbsp;2 Rue du Commandant François,
+                    67100 Strasbourg</p>
+                <p><i class="fa-solid fa-mobile" style="color: #000000;"></i>&nbspTéléphone <a
+                        href="tel:+337 71 89 46 87"> : 07 71 89 46 87</p></a>
                 <p><strong>Plan d'accès</strong></p>
                 <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2221.0578537533324!2d7.766636092838577!3d48.54668737633106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c9660e912251%3A0xfec12d3417c996ba!2s2%20Rue%20du%20Commandant%20Fran%C3%A7ois%2C%2067100%20Strasbourg!5e0!3m2!1sfr!2sfr!4v1738067259029!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
                 <h2>Nos heures d'ouverture</h2>
@@ -196,15 +216,19 @@
                         </div>
                         <div class="sujet1">
                             <label>Sujet (*)</label>
-                            <input type="text" name="sujet" placeholder="Le sujet de votre demande" maxlength="200" required>
+                            <input type="text" name="sujet" placeholder="Le sujet de votre demande" maxlength="200"
+                                required>
                         </div>
                         <div class="msg">
                             <label for="message">Votre message (*)</label>
-                            <textarea name="message" id="message" placeholder="votre message" maxlength="1000" required></textarea>
+                            <textarea name="message" id="message" placeholder="votre message" maxlength="1000"
+                                required></textarea>
                         </div>
                     </div>
-                    <input type="checkbox" name="rgpd" id="" required>(*) En soumettant ce formulaire, j'accepte la politique de confidentialité du site ; j'accepte que les informations saisies soient exploitées dans le cadre de ma demande de contact.
-                <button type="submit"><i class="fa-solid fa-paper-plane"></i>&nbsp;ENVOYER</button>
+                    <input type="checkbox" name="rgpd" id="" required>(*) En soumettant ce formulaire, j'accepte la
+                    politique de confidentialité du site ; j'accepte que les informations saisies soient exploitées dans
+                    le cadre de ma demande de contact.
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i>&nbsp;ENVOYER</button>
                 </form>
             </article>
         </section>
@@ -214,4 +238,5 @@
         <a href="#top"><i class="fa-solid fa-chevron-up"></i></a>
     </footer>
 </body>
+
 </html>
