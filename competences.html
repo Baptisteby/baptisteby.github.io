@@ -6,435 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mes Compétences</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #8a2be2;
-            --secondary-color: #9370db;
-            --light-color: #f8f9fa;
-            --dark-color: #343a40;
-            --accent-color: #ff6b6b;
-            --gradient-start: #8a2be2;
-            --gradient-end: #9370db;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--dark-color);
-            background-color: var(--light-color);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* Header styles */
-        header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 15rem;
-        }
-
-        nav ul li a {
-            color: var(--dark-color);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 0;
-            position: relative;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-            color: var(--primary-color);
-        }
-
-        nav ul li a.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--primary-color);
-        }
-
-        nav ul li a.contact-bubble {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        nav ul li a.contact-bubble:hover {
-            background-color: var(--secondary-color);
-            transform: scale(1.05);
-        }
-
-        nav ul li a.contact-bubble::after {
-            display: none;
-        }
-
-        /* Main content styles */
-        main {
-            flex: 1;
-            padding: 2rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .page-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            position: relative;
-            padding-bottom: 1rem;
-        }
-
-        .page-title:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
-            border-radius: 2px;
-        }
-
-        /* Skills section */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .skill-category {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .skill-category h3 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-            text-align: center;
-        }
-
-        .skill-item {
-            margin-bottom: 1.5rem;
-        }
-
-        .skill-name {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-
-        .skill-bar {
-            height: 10px;
-            background-color: #e9ecef;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .skill-progress {
-            height: 100%;
-            background-color: var(--primary-color);
-            border-radius: 5px;
-        }
-
-        /* Certifications section */
-        .certifications {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .certifications h2 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        .certification-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .certification-item {
-            background-color: var(--light-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s;
-        }
-
-        .certification-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .certification-item h3 {
-            color: var(--dark-color);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        .certification-item p {
-            color: #6c757d;
-            font-size: 0.9rem;
-        }
-
-        /* Footer styles */
-        footer {
-            background-color: white;
-            color: var(--dark-color);
-            padding: 2rem 0;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            gap: 10rem;
-        }
-
-        .footer-section {
-            flex: 1;
-            min-width: 250px;
-            margin-bottom: 1.5rem;
-            padding: 0 1rem;
-        }
-
-        .footer-section h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .social-links a:hover {
-            background-color: var(--secondary-color);
-            transform: scale(1.1);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 1.5rem;
-            border-top: 1px solid #eee;
-            margin-top: 1.5rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 2rem;
-            padding-right: 2rem;
-        }
-
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            nav ul {
-                margin-top: 1rem;
-            }
-
-            nav ul li {
-                margin: 0 0.5rem;
-            }
-
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Styles pour la section de description des compétences */
-        .skills-description {
-            background: linear-gradient(135deg, #ffffff, #f8f9fa);
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.1);
-            padding: 3rem;
-            margin-bottom: 4rem;
-            line-height: 1.8;
-            border-top: 5px solid var(--primary-color);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skills-description::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 150px;
-            height: 150px;
-            background: radial-gradient(circle, rgba(138, 43, 226, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .skills-description h2 {
-            color: var(--primary-color);
-            margin-bottom: 2rem;
-            text-align: center;
-            font-size: 2rem;
-            position: relative;
-            padding-bottom: 1rem;
-        }
-
-        .skills-description h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
-            border-radius: 2px;
-        }
-
-        .skills-description h3 {
-            color: var(--secondary-color);
-            margin: 2rem 0 1rem;
-            font-size: 1.4rem;
-            display: flex;
-            align-items: center;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .skills-description h3::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            width: 8px;
-            height: 25px;
-            background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
-            border-radius: 4px;
-        }
-
-        .skills-description p {
-            margin-bottom: 1.5rem;
-            text-align: justify;
-            color: #555;
-            line-height: 1.9;
-            position: relative;
-            z-index: 1;
-        }
-
-        .skills-description ul {
-            margin: 0 0 2rem 2.5rem;
-            list-style-type: none;
-        }
-
-        .skills-description li {
-            margin-bottom: 0.8rem;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .skills-description li::before {
-            content: '\f00c';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            color: var(--primary-color);
-            position: absolute;
-            left: 0;
-        }
-
-        .skills-description ul li:hover {
-            transform: translateX(5px);
-            transition: transform 0.3s ease;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
         <div class="header-container">
             <a href="index.html" class="logo">BJ</a>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav>
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
@@ -447,65 +30,89 @@
     </header>
 
     <main>
-        <div class="container">
-            <h1 class="page-title">Mes Compétences</h1>
+        <section class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="page-title">Mes Compétences</h1>
+                    <p class="section-subtitle">Développeur Front-end passionné par la création d'interfaces modernes et
+                        performantes</p>
+                </div>
 
-            <div class="skills-description">
-                <h2>Mes Technologies Maîtrisées</h2>
-                <p>Je suis spécialisé dans le développement front-end avec une solide maîtrise des technologies web
-                    modernes. Mon expertise se concentre sur la création d'interfaces utilisateur attrayantes,
-                    responsives et performantes.</p>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3>HTML5</h3>
+                        <p>Maîtrise des structures sémantiques et accessibles, intégration multimédia et formulaires
+                            interactifs.</p>
+                    </div>
 
-                <h3>HTML5</h3>
-                <p>Je maîtrise HTML5 et ses fonctionnalités avancées pour créer des structures web sémantiques et
-                    accessibles. J'utilise les balises sémantiques appropriées (header, nav, section, article, footer)
-                    pour améliorer l'accessibilité et le référencement. Je sais également intégrer des éléments
-                    multimédias (audio, vidéo) et des formulaires interactifs avec validation native.</p>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <h3>CSS3</h3>
+                        <p>Expert en mises en page responsives avec Flexbox et Grid, animations et transitions fluides.
+                        </p>
+                    </div>
 
-                <h3>CSS3</h3>
-                <p>En CSS3, je suis capable de créer des mises en page complexes et responsives en utilisant Flexbox et
-                    Grid. Je maîtrise les animations et transitions pour améliorer l'expérience utilisateur. J'applique
-                    les media queries pour garantir que mes sites s'adaptent parfaitement à tous les appareils, du
-                    mobile au desktop. Je sais également utiliser les variables CSS pour maintenir une cohérence
-                    visuelle et faciliter la maintenance.</p>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-bootstrap"></i>
+                        </div>
+                        <h3>Bootstrap</h3>
+                        <p>Développement rapide d'interfaces responsives avec personnalisation avancée.</p>
+                    </div>
 
-                <h3>Bootstrap</h3>
-                <p>J'utilise Bootstrap pour accélérer le développement d'interfaces responsives et cohérentes. Je
-                    maîtrise son système de grille, ses composants (navbar, cards, modals, carousel) et ses utilitaires.
-                    Je sais personnaliser Bootstrap pour l'adapter à l'identité visuelle spécifique de chaque projet
-                    tout en conservant ses avantages en termes de responsivité et de compatibilité cross-browser.</p>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-sass"></i>
+                        </div>
+                        <h3>SASS</h3>
+                        <p>Organisation optimale du code CSS avec variables, mixins et architecture 7-1.</p>
+                    </div>
 
-                <h3>SASS</h3>
-                <p>Je suis à l'aise avec SASS pour améliorer l'organisation et la maintenabilité de mes feuilles de
-                    style. J'utilise les variables, les mixins, les fonctions et l'imbrication pour écrire un code CSS
-                    plus modulaire et réutilisable. Je structure mes projets SASS selon l'architecture 7-1 pour une
-                    organisation optimale des fichiers. Cette approche me permet de développer plus rapidement et de
-                    maintenir des bases de code CSS évolutives.</p>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h3>JavaScript</h3>
+                        <p>Création d'interfaces dynamiques et interactives avec manipulation du DOM.</p>
+                    </div>
 
-                <h3>JavaScript</h3>
-                <p>En JavaScript, je développe des fonctionnalités interactives et dynamiques pour enrichir l'expérience
-                    utilisateur. Je maîtrise les concepts fondamentaux (DOM manipulation, événements).</p>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Formation</h3>
+                        <p>Développeur Web Junior 2025 - Formation en cours pour devenir un développeur full-stack.</p>
+                    </div>
+                </div>
 
-                <h3>Formation</h3>
-                <p>Je suis actuellement en formation de Développeur Web Junior 2025. Cette formation est en cours et me
-                    permet d'acquérir de nouvelles compétences. Je commence seulement à explorer le backend, après avoir
-                    consolidé mes connaissances en frontend. Cette formation me permettra d'être un développeur web
-                    complet, capable de travailler sur l'ensemble de la stack technique d'un projet.</p>
-
-                <h3>Projets Récents</h3>
-                <p>J'ai récemment appliqué ces compétences dans plusieurs projets, notamment :</p>
-                <ul>
-                    <li>Refonte complète du site Jadoo avec HTML5, CSS3 et Bootstrap</li>
-                    <li>Développement d'une interface responsive pour Esprit Sushi</li>
-                    <li>Création d'une boutique en ligne interactive avec JavaScript</li>
-                    <li>Implémentation d'une horloge dynamique en JavaScript</li>
-                </ul>
-
-                <p>Je reste constamment à jour avec les dernières évolutions de ces technologies à travers une veille
-                    technologique active et des formations continues. Cette approche me permet de proposer des solutions
-                    modernes et optimisées pour chaque projet.</p>
+                <div class="projects-showcase">
+                    <h2>Projets Récents</h2>
+                    <div class="projects-list">
+                        <div class="project-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Refonte complète du site Jadoo avec HTML5, CSS3 et Bootstrap</p>
+                        </div>
+                        <div class="project-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Développement d'une interface responsive pour Esprit Sushi</p>
+                        </div>
+                        <div class="project-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Création d'une boutique en ligne interactive avec JavaScript</p>
+                        </div>
+                        <div class="project-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Implémentation d'une horloge dynamique en JavaScript</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer>
@@ -532,6 +139,7 @@
             <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
         </div>
     </footer>
+    <script src="main.js"></script>
 </body>
 
 </html>
