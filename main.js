@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            // Here you would typically send the form data to a server
+            // alert message envoyé
             alert('Message envoyé avec succès!');
             form.reset();
         });
@@ -77,7 +77,7 @@ function isValidEmail(email) {
     return re.test(email);
 }
 
-// Smooth scrolling for navigation links
+// Smooth scrolling lien de navigation
 document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('nav a');
 
