@@ -77,7 +77,7 @@ function isValidEmail(email) {
     return re.test(email);
 }
 
-// Smooth scrolling lien de navigation
+// Smooth scrolling pour les liens de navigation
 document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('nav a');
 
